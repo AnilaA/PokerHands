@@ -3,39 +3,54 @@
  * */
 package code.logic;
 
-import java.util.ArrayList;
-import java.util.Collections;
+public class Card implements Comparable<Card> {
+	private int suit;
+	private int value;
 
-public class Card {
-	private String suit;
-	private String value;
+	//Integer[] suit = {0,1,2,3}; // 0 = Clubs, 1 = Diamonds, 2 = Hearts , 3 = Spades 
+	//Integer[] value = {2,3,4,5,6,7,8,9,10,11,12,13,14};
+	//String[] values = {"2", "3", "4", "5", "6", "7", "8", "9", "T", "J", "Q", "K", "A"};
 	
 
-	public Card(String suit, String value) {
-		this.suit = suit;
-		this.value = value;
+	public Card(int csuit, int cvalue) {
+		setSuit(csuit);
+		setValue(cvalue);
 	}
 
-	public  String getSuit() {
+	@Override
+	public int compareTo(Card arg0) {
+		// TODO Auto-generated method stub
+		return 0;
+	}
+
+	/**
+	 * @return the suit
+	 */
+	public int getSuit() {
 		return suit;
 	}
 
-	public  String getValue() {
-		return value;
-	}
-
-	public void setSuit(String suit) {
+	/**
+	 * @param suit the suit to set
+	 */
+	public void setSuit(int suit) {
 		this.suit = suit;
 	}
 
-	public void setValue(String value) {
+	/**
+	 * @return the value
+	 */
+	public int getValue() {
+		return value;
+	}
+
+	/**
+	 * @param value the value to set
+	 */
+	public void setValue(int value) {
 		this.value = value;
 	}
 	
-	public String toString()
-	{
-		return suit+value;
-	}
 	
 }
 	
