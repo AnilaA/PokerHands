@@ -8,9 +8,7 @@ public class Card implements Comparable<Card> {
 	private int value;
 
 	//Integer[] suit = {0,1,2,3}; // 0 = Clubs, 1 = Diamonds, 2 = Hearts , 3 = Spades 
-	//Integer[] value = {2,3,4,5,6,7,8,9,10,11,12,13,14};
-	//String[] values = {"2", "3", "4", "5", "6", "7", "8", "9", "T", "J", "Q", "K", "A"};
-	
+
 
 	public Card(int csuit, int cvalue) {
 		setSuit(csuit);
@@ -49,6 +47,15 @@ public class Card implements Comparable<Card> {
 	 */
 	public void setValue(int value) {
 		this.value = value;
+	}
+	
+	public String cardToString()
+	{
+		String card;
+		String[] valueString = {"2", "3", "4", "5", "6", "7", "8", "9", "T", "J", "Q", "K", "A"};
+		String[] suitString = {"C","D","H","S"};
+		return card = suitString[suit] + valueString[value-2];
+		
 	}
 	
 	
