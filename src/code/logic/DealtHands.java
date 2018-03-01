@@ -2,20 +2,18 @@
  * @author Anila Achankunju
  * */
 package code.logic;
-
-import java.util.Collections;
-
+/* Class to obtain two sets of hands*/
 public class DealtHands{
+	private Card[] hand;
 	private Card[] hand1;
 	private Card[] hand2;
-	private Card[] hand;
 	Deck dealtCards;
 
 	public DealtHands()
 	{
+		hand = new Card[10];
 		hand1 = new Card[5];
 		hand2 = new Card[5];
-		hand = new Card[10];
 		dealtCards = new Deck();
 	}
 	
@@ -24,18 +22,19 @@ public class DealtHands{
 		for(int i=0;i<5;i++)
 		{
 			hand1[i] = hand[i];
-		//	System.out.println(hand1[i].getSuit()+""+hand1[i].getValue());
+	//	System.out.println(hand1[i].getSuit()+""+hand1[i].getValue());
 	
 		}
+		
 		sortHand(hand1);
 		
+	//	System.out.println("**********************");
 		for(int j=0;j<5;j++)
 		{
 			hand2[j]=hand[j+5];
-		//	System.out.println(hand2[j].getSuit()+""+hand2[j].getValue());
+	//	System.out.println(hand2[j].getSuit()+""+hand2[j].getValue());
 		}
-		sortHand(hand2);
-		
+		sortHand(hand2);	
 	}
 	
 	public String printHand1(){
@@ -58,6 +57,7 @@ public class DealtHands{
 		}
 		return h2;
 	}
+	
 	//sort the hands in ascending order 
 	public Card[] sortHand(Card[] o) {
 		Integer in, out;
@@ -80,16 +80,6 @@ public class DealtHands{
 	public Card[] getHand2() {
 		return hand2;
 	}
-		
-/*		public static void main(String[] args) {
-		DealtHands obj = new DealtHands();
-		obj.getHands();
-		obj.printHand1();
-		obj.printHand2();
-	}
-
-*/
-
 
 }
 

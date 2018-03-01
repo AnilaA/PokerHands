@@ -1,14 +1,10 @@
-/**
- * @author Anila Achankunju
- * */
-
 package code.test;
 
 import static org.junit.Assert.*;
 
 import org.junit.Test;
 
-public class cardTest {
+public class HandTest {
 
 	@Test
 	public void test() {

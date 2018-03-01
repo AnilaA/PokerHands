@@ -2,7 +2,7 @@
  * @author Anila Achankunju
  * */
 package code.logic;
-
+/* Class to create a playing card*/
 public class Card{
 	private Integer suit;
 	private Integer value;
@@ -43,8 +43,8 @@ public class Card{
 		String card;
 		String[] valueString = {"2", "3", "4", "5", "6", "7", "8", "9", "T", "J", "Q", "K", "A"};
 		String[] suitString = {"C","D","H","S"};
-		return card = suitString[suit] + valueString[value-2];
-		
+		card = suitString[suit] + valueString[value-2];
+		return card;
 	}
 	
 	
