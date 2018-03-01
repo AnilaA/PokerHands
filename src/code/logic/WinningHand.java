@@ -53,8 +53,8 @@ public class WinningHand {
 	
 	public void display(){
 		compareHands();
-		/*System.out.println("");
-		System.out.println("rank1  " + rank1);
+		System.out.println("");
+		/*System.out.println("rank1  " + rank1);
 		System.out.println("rank2  " + rank2);
 		System.out.println("w rank  " + wrank);
 		*/

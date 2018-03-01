@@ -22,12 +22,13 @@ public class Deck {
 		Collections.shuffle(this.deck);
 		
 	}
-
+	
+	/*Pick first ten cards for two hands */
 	public Card[] getDealtCards() {
 
-		for(int j=0,i=15;i<25;i++,j++)
+		for(int i=0;i<10;i++)
 		{	
-			dealCards[j]= deck.get(i);
+			dealCards[i]= deck.get(i);
 		}
 		return dealCards;
 		}	

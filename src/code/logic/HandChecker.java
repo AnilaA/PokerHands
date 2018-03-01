@@ -163,13 +163,12 @@ public class HandChecker {
 	*/
 	private double aFullHouse() {
 		calc_rank = 0.0;
-		double value = 0.0;
 		if(aThreeOfAKind()>3.0){
-			int c = hand[2].getValue();
+			Integer c = hand[2].getValue();
 			for(int i=0;i<4;i++){
-				if(hand[i].getValue()==hand[i+1].getValue()&& hand[i].getValue()!=c){				
-					value = aThreeOfAKind();
-					calc_rank = 6.0 + (3-value);
+				if(hand[i].getValue()==hand[i+1].getValue()&& hand[i].getValue()!=c)
+				{
+					calc_rank = 6.0 + (c*.01);
 				}
 			}
 			
