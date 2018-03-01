@@ -3,49 +3,38 @@
  * */
 package code.logic;
 
-public class Card implements Comparable<Card> {
-	private int suit;
-	private int value;
+public class Card{
+	private Integer suit;
+	private Integer value;
 
-	//Integer[] suit = {0,1,2,3}; // 0 = Clubs, 1 = Diamonds, 2 = Hearts , 3 = Spades 
-
-
-	public Card(int csuit, int cvalue) {
+	public Card(Integer csuit, Integer cvalue) {
 		setSuit(csuit);
 		setValue(cvalue);
 	}
 
-	@Override
-	public int compareTo(Card arg0) {
-		// TODO Auto-generated method stub
-		return 0;
+	public void setSuit(Integer suit) {
+		this.suit = suit;
 	}
 
 	/**
 	 * @return the suit
 	 */
-	public int getSuit() {
+	public Integer getSuit() {
 		return suit;
 	}
 
-	/**
-	 * @param suit the suit to set
-	 */
-	public void setSuit(int suit) {
-		this.suit = suit;
-	}
 
 	/**
 	 * @return the value
 	 */
-	public int getValue() {
+	public Integer getValue() {
 		return value;
 	}
 
 	/**
 	 * @param value the value to set
 	 */
-	public void setValue(int value) {
+	public void setValue(Integer value) {
 		this.value = value;
 	}
 	

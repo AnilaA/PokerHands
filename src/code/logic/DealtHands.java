@@ -3,12 +3,14 @@
  * */
 package code.logic;
 
-public class DealtHands {
+import java.util.Collections;
+
+public class DealtHands{
 	private Card[] hand1;
 	private Card[] hand2;
 	private Card[] hand;
 	Deck dealtCards;
-	String [] suitString = {"C","D","H","S"};
+
 	public DealtHands()
 	{
 		hand1 = new Card[5];
@@ -22,15 +24,18 @@ public class DealtHands {
 		for(int i=0;i<5;i++)
 		{
 			hand1[i] = hand[i];
-			System.out.println(hand1[i].getSuit()+""+hand1[i].getValue());
-		}
-		System.out.println("********************");
+		//	System.out.println(hand1[i].getSuit()+""+hand1[i].getValue());
 	
+		}
+		sortHand(hand1);
+		
 		for(int j=0;j<5;j++)
 		{
 			hand2[j]=hand[j+5];
-			System.out.println(hand2[j].getSuit()+""+hand2[j].getValue());
+		//	System.out.println(hand2[j].getSuit()+""+hand2[j].getValue());
 		}
+		sortHand(hand2);
+		
 	}
 	
 	public String printHand1(){
@@ -53,11 +58,38 @@ public class DealtHands {
 		}
 		return h2;
 	}
-	/*public static void main(String[] args) {
+	//sort the hands in ascending order 
+	public Card[] sortHand(Card[] o) {
+		Integer in, out;
+	    for (out = 1; out < o.length; out++) {
+	      Card temp = o[out];
+	      in = out;
+	      while (in > 0 && o[in - 1].getValue().compareTo(temp.getValue()) > 0) {
+	        o[in] = o[in - 1];
+	        --in;
+	      }
+	      o[in] = temp;
+	    }
+		return o;
+	}
+
+	public Card[] getHand1() {
+		return hand1;
+	}
+
+	public Card[] getHand2() {
+		return hand2;
+	}
+		
+/*		public static void main(String[] args) {
 		DealtHands obj = new DealtHands();
 		obj.getHands();
 		obj.printHand1();
 		obj.printHand2();
-	}*/
+	}
+
+*/
+
+
 }
 
